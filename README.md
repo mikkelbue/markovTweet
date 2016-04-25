@@ -12,6 +12,6 @@ This program generates a Markov chain (https://en.wikipedia.org/wiki/Markov_chai
 
 1. Edit markovtwitter.py and input your Twitter credentials.
 2. Place a number of .txt-files in the working directory
-3. Run markovtwitter.py
+3. Run markovTweet.py
 4. ???
 5. Profit
