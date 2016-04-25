@@ -1,10 +1,10 @@
-# markovtwitter
+# markovTweet
 
 This program generates a Markov chain (https://en.wikipedia.org/wiki/Markov_chain) from a number of text files, and posts a pseudo-random string, based on the chain to a Twitter account.
 
 # Dependencies
 
-1. Python 2.x
+1. Python 2.6 or above (only tested with Python 2.7)
 2. PyMarkovChain: https://github.com/TehMillhouse/PyMarkovChain/tree/master/pymarkovchain
 3. Tweepy
 
