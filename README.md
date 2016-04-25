@@ -1,4 +1,4 @@
-# markovtwitter
+# markovTweet
 
 This program generates a Markov chain (https://en.wikipedia.org/wiki/Markov_chain) from a number of text files, and posts a pseudo-random string, based on the chain to a Twitter account.
 
