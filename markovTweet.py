@@ -7,7 +7,7 @@ import tweepy
 
 
 # wordpoolGen will generate a list of words from all available .txt.files in the working directory
-def wordPoolGen():
+def wordpool_generator():
 	wordpool = []
 
 	# The following iterator will run through all .txt file in the directory
@@ -22,12 +22,12 @@ def wordPoolGen():
 	return wordpool
 
 # databaseGen will generate and dumb a database.
-def databaseGen(markovChain, wordpool):
+def database_generator(markovChain, wordpool):
 		markovChain.generateDatabase(wordpool)
 		markovChain.dumpdb()
 
 # stringGen will generate a string, based on the markov database.
-def stringGen(markovChain):
+def string_generator(markovChain):
 	while True:
 		markovString = markovChain.generateString()
 		
@@ -38,7 +38,7 @@ def stringGen(markovChain):
 
 # twitterPoster posts the string to Twitter
 # See http://www.dototot.com/how-to-write-a-twitter-bot-with-python-and-tweepy/ for details
-def twitterPoster(string):
+def twitter_poster(string):
 	#enter the corresponding information from your Twitter application:
 	CONSUMER_KEY = 'consumerkey'#keep the quotes, replace this with your consumer key
 	CONSUMER_SECRET = 'consumersecret'#keep the quotes, replace this with your consumer secret key
@@ -58,8 +58,8 @@ if __name__ == '__main__':
 	databaseName = 'database.db'
 	markovChain = MarkovChain(databaseName)
 	if not os.path.isfile(databaseName):
-		wordpool = wordPoolGen(); databaseGen(markovChain, wordpool)
+		wordpool = wordpool_generator(); database_generator(markovChain, wordpool)
 	else:
 		print('Database already exists, skipping database creation...')
-	string = stringGen(markovChain)
-	twitterPoster(string)
+	string = string_generator(markovChain)
+	twitter_poster(string)
