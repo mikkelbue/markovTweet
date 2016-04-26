@@ -55,7 +55,7 @@ def twitter_poster(string):
 # 3. generate a string from the markovChain
 # 4. post the string to Twitter
 if __name__ == '__main__':
-	databaseName = 'database.db'
+	databaseName = 'database.mkc'
 	markovChain = MarkovChain(databaseName)
 	if not os.path.isfile(databaseName):
 		wordpool = wordpool_generator(); database_generator(markovChain, wordpool)
