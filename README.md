@@ -5,7 +5,9 @@ This program generates a Markov chain (https://en.wikipedia.org/wiki/Markov_chai
 # Dependencies
 
 1. Python 2.6 or above (only tested with Python 2.7)
-2. PyMarkovChain: https://github.com/TehMillhouse/PyMarkovChain (included for convenience)
+2. PyMarkovChain:
+	from git: https://github.com/TehMillhouse/PyMarkovChain
+	or run "pip install PyMarkovChain" 
 3. Tweepy
 
 # Usage
